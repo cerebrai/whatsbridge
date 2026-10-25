@@ -1,0 +1,6 @@
+[project]
+name = "whatsbridge"
+version = "0.1.0"
+description = "Push WhatsApp messages into a Claude Code session, and let Claude reply"
+requires-python = ">=3.11"
+dependencies = []

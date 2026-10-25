@@ -13,6 +13,17 @@ Built as a [Claude Code channel](https://code.claude.com/docs/en/channels): a lo
 
 The bridge is standard library only. There is nothing to install.
 
+## Hosting status: do not use a remote server yet
+
+Tested in October 2026 on a Hetzner Cloud server. It failed.
+
+- **Singapore:** Hetzner does not offer the ARM `cax11` there. That location has only x86 plans, and the cheapest `4 GB` one is `cpx21` at €21.99/month.
+- **Helsinki:** `cax11` was available, so the test ran there. Claude Code logged `channels feature is not currently available` and skipped every channel notification, so no WhatsApp message reached the session.
+- The same account, token, config and version work on a laptop on another network. The block is a remote preview switch, not this code.
+- The bridge still starts polling once Claude Code connects, even when the channel is skipped. It will consume WhatsApp messages and drop them.
+
+Until the preview switch allows it, run the bridge on a machine where the channel registers, not on a Hetzner server.
+
 ## Setup
 
 **1. Clone the repo.**
